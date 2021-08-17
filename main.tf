@@ -23,15 +23,15 @@ resource "azurerm_network_interface" "az_nic" {
   }
 
   dynamic "ip_configuration" {
-      for_each = local.secondary_configuration
-      content {
-          # TBD configuration for secondary ip configuration
-    name                          = var.secondary_ip_configuration_name
-    #subnet_id                     = var.subnet_id
-    #private_ip_address_allocation = var.private_ip_address_allocation
-    #private_ip_address_version    = var.private_ip_address_version
-    #public_ip_address_id          = var.public_ip_address_id
-    #private_ip_address            = var.private_ip_address
-      }
+    for_each = local.secondary_configuration
+    content {
+      # TBD configuration for secondary ip configuration
+      name = var.secondary_ip_configuration_name
+      #subnet_id                     = var.subnet_id
+      #private_ip_address_allocation = var.private_ip_address_allocation
+      #private_ip_address_version    = var.private_ip_address_version
+      #public_ip_address_id          = var.public_ip_address_id
+      #private_ip_address            = var.private_ip_address
+    }
   }
 }
