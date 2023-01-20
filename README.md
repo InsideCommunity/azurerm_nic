@@ -1,4 +1,4 @@
-# TF_azurerm_nic_module
+# Azurerm_nic
 
 Deploy Azure Network Interface with a dedicated Terraform module.
 
